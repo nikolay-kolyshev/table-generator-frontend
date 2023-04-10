@@ -1,0 +1,37 @@
+{
+  "name": "table-generator-frontend",
+  "version": "0.0.0",
+  "author": "sword.of.destiny2001@mail.ru",
+  "license": "MIT",
+  "description": "Interface for table generator",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run start --parallel",
+    "start:web-application": "lerna run start --scope web-application",
+    "start:ui-kit": "lerna run start --scope ui-kit",
+
+    "build-ui-kit": "cd packages/ui-kit && pnpm run build && cd ../",
+
+    "unsetup": "pnpm dlx rimraf node_modules packages/ui-kit/node_modules/ packages/web-application/node_modules/",
+
+    "presetup": "npm run unsetup",
+    "setup": "pnpm install --frozen-lockfile",
+    "postsetup": "pnpm run build-ui-kit",
+
+    "prereinstall": "pnpm run unsetup && pnpm dlx rimraf pnpm-lock.yaml",
+    "reinstall": "pnpm install",
+    "postreinstall": "pnpm run build-ui-kit"
+  },
+  "devDependencies": {
+    "lerna": "6.6.1"
+  },
+  "engineStrict": true,
+  "engines": {
+    "npm": "use-pnpm-instead-of-npm",
+    "yarn": "use-pnpm-instead-of-yarn",
+    "pnpm": ">= 8.1.1"
+  }
+}

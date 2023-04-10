@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json.schemastore.org/swcrc",
+    "jsc": {
+        "target": "es2019",
+        "transform": {
+            "decoratorMetadata": true,
+            "legacyDecorator": true
+        }
+    }
+}

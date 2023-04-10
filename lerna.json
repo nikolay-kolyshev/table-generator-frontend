@@ -1,0 +1,12 @@
+{
+  "version": "independent",
+  "packages": ["packages/*"],
+  "useWorkspaces": true,
+  "npmClient": "pnpm",
+  "command": {
+    "version": {
+      "allowBranch": "main",
+      "conventionalCommits": true
+    }
+  }
+}

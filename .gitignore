@@ -1,0 +1,14 @@
+# IDEA
+.idea
+
+# Dependencies
+node_modules
+packages/**/node_modules
+
+# Build
+packages/**/lib
+packages/**/build
+packages/ui-kit/storybook-static
+
+# Test coverage
+packages/**/coverage

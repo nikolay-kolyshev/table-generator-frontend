@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json.schemastore.org/swcrc",
+    "jsc": {
+        "target": "es2019",
+        "parser": {
+            "syntax": "typescript",
+            "tsx": true
+        },
+        "transform": {
+          "react": {
+            "pragma": "React.createElement",
+            "pragmaFrag": "React.Fragment"
+          },
+          "hidden": {
+            "jest": true
+          }
+        }
+    }
+}

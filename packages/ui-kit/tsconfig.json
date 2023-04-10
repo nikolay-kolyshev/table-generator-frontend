@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "jsx": "react",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "preserveSymlinks": true,
+        "allowJs": false,
+        "baseUrl": "src",
+        "declaration": true,
+        "forceConsistentCasingInFileNames": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "target": "es2019",
+        "lib": ["es5", "es6", "es7", "es2017", "dom"],
+        "paths": { "@": ["."], "@/*": ["./*"] },
+        "types": ["node", "jest", "@testing-library/react"],
+        "outDir": "lib"
+    },
+    "include": [
+        "src/**/*",
+        "src/tests/setup-tests.ts"
+    ],
+    "exclude": ["node_modules"]
+}
