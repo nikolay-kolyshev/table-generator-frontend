@@ -1,4 +1,4 @@
-import React, from "react";
+import React from "react";
 import {Modal, lightTheme} from "ui-kit";
 import {ThemeProvider} from "styled-components";
 import {RouterProvider} from "react-router-dom";

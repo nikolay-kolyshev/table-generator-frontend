@@ -1,20 +1,10 @@
 import { isKey, EKey } from '@/common/helpers/key-events.helper';
 import { StyledModalChildren, StyledModalContent } from '@/modal/modal.styles';
-import { EAnimationState, EModalVariant } from '@/modal/modal.types';
+import {EAnimationState, EModalVariant, IModalProps} from '@/modal/modal.types';
 import { Overlay } from '@/overlay/overlay.component';
-import React, { FC, HTMLAttributes, memo, useCallback, useEffect, useRef, useState } from 'react';
+import React, { FC, memo, useCallback, useEffect, useRef, useState } from 'react';
 import { ModalCrossButton } from './modal-cross-button/modal-cross-button.component';
 import { Portal } from '@/common/portal';
-
-export interface IModalProps extends HTMLAttributes<HTMLDivElement> {
-    isOpen: boolean;
-    isWithCross?: boolean;
-    variant?: EModalVariant;
-    isNoCloseMode?: boolean;
-    onClose?(): void;
-    onCrossButtonClick?(): void;
-    onOutsideClick?(): void;
-}
 
 export const modalDefaultProps = {
     isWithCross: true,
