@@ -1,7 +1,7 @@
 import * as ColorIcon from '@/color-icon/components';
 import { useTheme } from 'styled-components';
-import React, {createElement} from 'react';
-import {EColorVariant} from '@/theme/theme.types';
+import React, { createElement } from 'react';
+import { EColorVariant } from '@/theme/theme.types';
 import { ColorIconVariant } from '@/color-icon/color-icon.types';
 
 interface IconWithColorProps {

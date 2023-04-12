@@ -1,9 +1,9 @@
 import React from 'react';
-import {createBrowserRouter} from "react-router-dom";
+import { createBrowserRouter } from 'react-router-dom';
 
 export const routerConfig = createBrowserRouter([
     {
-        path: "/",
+        path: '/',
         element: <div>Hello world!</div>,
     },
 ]);

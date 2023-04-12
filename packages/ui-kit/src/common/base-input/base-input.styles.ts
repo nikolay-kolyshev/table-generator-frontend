@@ -11,11 +11,7 @@ import { paperBorderRadiuses } from '@/paper/paper.constants';
 
 const isMediumSize = (height: EInputSize) => height === EInputSize.Medium;
 const getSidePadding = (height: EInputSize) => (isMediumSize(height) ? 14 : 0);
-const getInputPadding = ({
-    height,
-}: {
-    height: EInputSize;
-}) => {
+const getInputPadding = ({ height }: { height: EInputSize }) => {
     const sidePadding = getSidePadding(height);
 
     return `0 ${sidePadding}px 0 ${sidePadding}px`;

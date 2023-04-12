@@ -3,8 +3,8 @@ import { EModalVariant } from './modal.types';
 import { OPEN_MODAL, StyledCustomModalContent } from './modal.stub';
 import { Modal } from './modal.component';
 import { DEFAULT_COMPONENT_TEXT } from '@/common';
-import {Typography} from "@/typography";
-import {ETypographyVariant} from "@/typography/typography.types";
+import { Typography } from '@/typography';
+import { ETypographyVariant } from '@/typography/typography.types';
 
 export default {
     parameters: {
@@ -28,7 +28,9 @@ export const CenterStory = () => {
         <>
             <button onClick={handleOpen}>{OPEN_MODAL}</button>
             <Modal isOpen={isOpen} onClose={handleClose} variant={EModalVariant.Center}>
-                <StyledCustomModalContent><Typography variant={ETypographyVariant.Body1Black}>{DEFAULT_COMPONENT_TEXT}</Typography></StyledCustomModalContent>
+                <StyledCustomModalContent>
+                    <Typography variant={ETypographyVariant.Body1Black}>{DEFAULT_COMPONENT_TEXT}</Typography>
+                </StyledCustomModalContent>
             </Modal>
         </>
     );
@@ -49,7 +51,9 @@ export const BottomStory = () => {
         <>
             <button onClick={handleOpen}>{OPEN_MODAL}</button>
             <Modal isOpen={isOpen} onClose={handleClose} variant={EModalVariant.Bottom}>
-                <StyledCustomModalContent><Typography variant={ETypographyVariant.Body1Black}>{DEFAULT_COMPONENT_TEXT}</Typography></StyledCustomModalContent>
+                <StyledCustomModalContent>
+                    <Typography variant={ETypographyVariant.Body1Black}>{DEFAULT_COMPONENT_TEXT}</Typography>
+                </StyledCustomModalContent>
             </Modal>
         </>
     );

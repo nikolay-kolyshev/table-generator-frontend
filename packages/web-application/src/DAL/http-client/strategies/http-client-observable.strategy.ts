@@ -1,16 +1,19 @@
-import {THttpClientMethodMutableConfig, THttpClientMethodUnMutableConfig, THttpClientRequest} from '../http-client-base.types';
-import {httpClientMethod} from '../decorators/http-client-method.decorator';
-import {HttpClientBase} from "../http-client-base.abstract";
-import {EHttpClientStrategy} from "../http-client-base.types";
-import {Observable} from "rxjs";
-import {Service} from "typedi";
+import {
+    THttpClientMethodMutableConfig,
+    THttpClientMethodUnMutableConfig,
+    THttpClientRequest,
+} from '../http-client-base.types';
+import { httpClientMethod } from '../decorators/http-client-method.decorator';
+import { HttpClientBase } from '../http-client-base.abstract';
+import { EHttpClientStrategy } from '../http-client-base.types';
+import { Observable } from 'rxjs';
+import { Service } from 'typedi';
 
 @Service()
 export class HttpClientObservable extends HttpClientBase<EHttpClientStrategy.Observable> {
-
     @httpClientMethod(EHttpClientStrategy.Observable)
     getData<R>(url: string, config?: THttpClientRequest & THttpClientMethodUnMutableConfig): Observable<R> {
-        return this.apiInstance.get( url, {
+        return this.apiInstance.get(url, {
             params: config?.queryParams ?? {},
             headers: config?.headers ?? {},
         }) as unknown as Observable<R>;
@@ -38,5 +41,4 @@ export class HttpClientObservable extends HttpClientBase<EHttpClientStrategy.Obs
             headers: config?.headers ?? {},
         }) as unknown as Observable<R>;
     }
-
 }

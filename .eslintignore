@@ -1,0 +1,7 @@
+node_modules
+packages/ui-kit/node_modules
+packages/ui-kit/lib
+packages/web-application/node_modules
+packages/web-application/build
+
+!.storybook

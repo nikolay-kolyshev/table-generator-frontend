@@ -13,7 +13,7 @@ export enum ETypographyVariant {
     Label2WhiteText = 'Label2WhiteText',
     UnderlinedLabel1Secondary = 'UnderlinedLabel1Secondary',
     UnderlinedLabel1SecondaryDanger = 'UnderlinedLabel1SecondaryDanger',
-    Caption1Danger = 'Caption1Danger'
+    Caption1Danger = 'Caption1Danger',
 }
 
 export enum ETypographyStyle {

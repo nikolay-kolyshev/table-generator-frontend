@@ -2,7 +2,7 @@ import { ComponentLabel } from '@/common';
 import React from 'react';
 import { PortalStub } from '@/common/portal/portal.stub';
 import { Portal } from '@/common/portal';
-import {darkTheme, lightTheme} from '@/theme/theme.constants';
+import { darkTheme, lightTheme } from '@/theme/theme.constants';
 
 export default {
     component: Portal,

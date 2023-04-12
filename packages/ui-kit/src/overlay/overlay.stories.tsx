@@ -1,4 +1,4 @@
-import {renderOverlayStory} from "@/overlay/overlay.stub";
+import { renderOverlayStory } from '@/overlay/overlay.stub';
 
 export default {
     title: 'Components/Overlay',

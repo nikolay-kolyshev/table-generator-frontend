@@ -40,7 +40,6 @@ export const DefaultBaseInputStory = () =>
         valid: baseInputDefaultProps.valid,
     });
 
-
 export const BaseInputPlaceholderStory = () =>
     renderBaseInput({ placeholder: DEFAULT_COMPONENT_TEXT, name: 'baseInputPlaceholder' });
 

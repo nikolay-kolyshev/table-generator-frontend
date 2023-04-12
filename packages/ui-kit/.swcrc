@@ -7,13 +7,13 @@
             "tsx": true
         },
         "transform": {
-          "react": {
-            "pragma": "React.createElement",
-            "pragmaFrag": "React.Fragment"
-          },
-          "hidden": {
-            "jest": true
-          }
+            "react": {
+                "pragma": "React.createElement",
+                "pragmaFrag": "React.Fragment"
+            },
+            "hidden": {
+                "jest": true
+            }
         }
     }
 }

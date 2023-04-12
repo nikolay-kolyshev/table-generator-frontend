@@ -1,16 +1,14 @@
 import React from 'react';
-import {Overlay, IOverlayProps} from '@/overlay/overlay.component';
+import { Overlay, IOverlayProps } from '@/overlay/overlay.component';
 import styled from 'styled-components';
-import {Typography} from "@/typography";
-import {ETypographyVariant} from "@/typography/typography.types";
+import { Typography } from '@/typography';
+import { ETypographyVariant } from '@/typography/typography.types';
 
 export const renderOverlayStory = (props: IOverlayProps) => (
     <>
         <button>Button under overlay</button>
         <Overlay {...props}>
-            <Typography variant={ETypographyVariant.Body2GrayscaleVariant1}>
-                Text in overlay
-            </Typography>
+            <Typography variant={ETypographyVariant.Body2GrayscaleVariant1}>Text in overlay</Typography>
         </Overlay>
     </>
 );

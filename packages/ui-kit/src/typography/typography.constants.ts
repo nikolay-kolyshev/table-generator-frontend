@@ -5,7 +5,7 @@ import {
     ETypographyStyle,
     ETypographyVariant,
 } from '@/typography/typography.types';
-import {EColorVariant} from '@/theme/theme.types';
+import { EColorVariant } from '@/theme/theme.types';
 
 export const typographyFontFamilies: { [key in ETypographyFontFamily]: string } = {
     [ETypographyFontFamily.Roboto]: 'Roboto, sans-serif',
@@ -74,15 +74,57 @@ const typographyStyles: { [key in ETypographyStyle]: TypographyStyleProps } = {
     Heading1: getTypographyStyles('50px', '50px', 'normal', ETypographyFontFamily.Roboto, ETypographyFontWeight.Bold),
     Heading2: getTypographyStyles('32px', '32px', 'normal', ETypographyFontFamily.Roboto, ETypographyFontWeight.Bold),
 
-    Body1: getTypographyStyles('14px', '14.06px', 'normal', ETypographyFontFamily.Roboto, ETypographyFontWeight.Regular),
-    Body2: getTypographyStyles('12px', '14.06px', 'normal', ETypographyFontFamily.Roboto, ETypographyFontWeight.Regular),
+    Body1: getTypographyStyles(
+        '14px',
+        '14.06px',
+        'normal',
+        ETypographyFontFamily.Roboto,
+        ETypographyFontWeight.Regular,
+    ),
+    Body2: getTypographyStyles(
+        '12px',
+        '14.06px',
+        'normal',
+        ETypographyFontFamily.Roboto,
+        ETypographyFontWeight.Regular,
+    ),
 
-    Label1: getTypographyStyles('12px', '14.06px', 'normal', ETypographyFontFamily.Roboto, ETypographyFontWeight.Bold, 'uppercase'),
-    Label2: getTypographyStyles('12px', '14.06px', 'normal', ETypographyFontFamily.Roboto, ETypographyFontWeight.Regular),
+    Label1: getTypographyStyles(
+        '12px',
+        '14.06px',
+        'normal',
+        ETypographyFontFamily.Roboto,
+        ETypographyFontWeight.Bold,
+        'uppercase',
+    ),
+    Label2: getTypographyStyles(
+        '12px',
+        '14.06px',
+        'normal',
+        ETypographyFontFamily.Roboto,
+        ETypographyFontWeight.Regular,
+    ),
 
-    UnderlinedLabel1: getTypographyStyles('12px', '14.06px', 'normal', ETypographyFontFamily.Roboto, ETypographyFontWeight.Regular, 'none', 'underline'),
+    UnderlinedLabel1: getTypographyStyles(
+        '12px',
+        '14.06px',
+        'normal',
+        ETypographyFontFamily.Roboto,
+        ETypographyFontWeight.Regular,
+        'none',
+        'underline',
+    ),
 
-    Caption1: getTypographyStyles('12px', '14.06px', 'normal', ETypographyFontFamily.Roboto, ETypographyFontWeight.Regular, 'none', 'none', 'italic'),
+    Caption1: getTypographyStyles(
+        '12px',
+        '14.06px',
+        'normal',
+        ETypographyFontFamily.Roboto,
+        ETypographyFontWeight.Regular,
+        'none',
+        'none',
+        'italic',
+    ),
 };
 
 export const typographyVariants: {
@@ -97,6 +139,9 @@ export const typographyVariants: {
     Label1WhiteText: getTypographyVariant(ETypographyStyle.Label1, ETypographyColor.WhiteText),
     Label2WhiteText: getTypographyVariant(ETypographyStyle.Label2, ETypographyColor.WhiteText),
     UnderlinedLabel1Secondary: getTypographyVariant(ETypographyStyle.UnderlinedLabel1, ETypographyColor.Secondary),
-    UnderlinedLabel1SecondaryDanger: getTypographyVariant(ETypographyStyle.UnderlinedLabel1, ETypographyColor.SecondaryDanger),
+    UnderlinedLabel1SecondaryDanger: getTypographyVariant(
+        ETypographyStyle.UnderlinedLabel1,
+        ETypographyColor.SecondaryDanger,
+    ),
     Caption1Danger: getTypographyVariant(ETypographyStyle.Caption1, ETypographyColor.PrimaryDanger),
 };

@@ -3,11 +3,11 @@ import { deviceSize } from '../src/common/grid/device-size.constants';
 import './storybook-global.css';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs';
 import { Preview } from '@storybook/react';
-import {StyledStorybookLayout, StyledStoryTitle} from "../src/common/index.styles";
-import {EColorVariant} from "../src/theme/theme.types";
+import { StyledStorybookLayout, StyledStoryTitle } from '../src/common/index.styles';
+import { EColorVariant } from '../src/theme/theme.types';
 import { lightTheme, darkTheme } from '../src/theme/theme.constants';
-import {createGlobalStyle, ThemeProvider} from "styled-components";
-import {withThemeFromJSXProvider} from "@storybook/addon-styling";
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { withThemeFromJSXProvider } from '@storybook/addon-styling';
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
 
 export const preview: Preview = {
     decorators: [
-        (Story, context ) => (
+        (Story, context) => (
             <StyledStorybookLayout
                 withoutMargin={context.parameters.withoutMargin as boolean}
                 withoutPadding={context.parameters.withoutPadding as boolean}
@@ -35,7 +35,7 @@ export const preview: Preview = {
             defaultTheme: 'light',
             Provider: ThemeProvider,
             GlobalStyles,
-        })
+        }),
     ],
     parameters: {
         viewport: {
@@ -70,7 +70,7 @@ export const preview: Preview = {
             container: DocsContainer,
             page: DocsPage,
         },
-    }
+    },
 };
 
 export default preview;

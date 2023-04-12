@@ -1,11 +1,4 @@
-import {
-    EColorVariant,
-    EShadowVariant,
-    ITheme,
-    TThemeColors,
-    TThemeShadows,
-    EThemeVariant
-} from '@/theme/theme.types';
+import { EColorVariant, EShadowVariant, ITheme, TThemeColors, TThemeShadows, EThemeVariant } from '@/theme/theme.types';
 import { hex2rgba } from '@/common/helpers/hex-to-rgba.helper';
 
 export const darkThemeColors: TThemeColors = {

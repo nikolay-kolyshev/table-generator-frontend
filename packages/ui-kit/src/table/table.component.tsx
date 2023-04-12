@@ -1,24 +1,22 @@
-import React, {memo, ReactElement} from "react";
+import React, { memo, ReactElement } from 'react';
 import {
     StyledTable,
     StyledTableBody,
-    StyledTableBodyData, StyledTableBodyRow,
+    StyledTableBodyData,
+    StyledTableBodyRow,
     StyledTableHead,
-    StyledTableHeadData, StyledTableWrapper
-} from "@/table/table.styles";
-import {ITableProps} from "@/table/table.types";
-import {useTable} from "react-table";
+    StyledTableHeadData,
+    StyledTableWrapper,
+} from './table.styles';
+import { ITableProps } from './table.types';
+import { useTable } from 'react-table';
 
-
-const TableComponent = <ColumnData extends object = {}>({columnConfig, rowData, isLoading}: ITableProps<ColumnData>) => {
-
-    const {
-        getTableProps,
-        getTableBodyProps,
-        headerGroups,
-        rows,
-        prepareRow,
-    } = useTable({
+const TableComponent = <ColumnData extends object = {}>({
+    columnConfig,
+    rowData,
+    isLoading,
+}: ITableProps<ColumnData>) => {
+    const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({
         columns: columnConfig,
         data: rowData,
     });
@@ -31,7 +29,7 @@ const TableComponent = <ColumnData extends object = {}>({columnConfig, rowData, 
                         <tr {...headerGroup.getHeaderGroupProps()}>
                             {headerGroup.headers.map((column) => (
                                 <StyledTableHeadData {...column.getHeaderProps()}>
-                                    {column.render("Header")}
+                                    {column.render('Header')}
                                 </StyledTableHeadData>
                             ))}
                         </tr>
@@ -44,7 +42,9 @@ const TableComponent = <ColumnData extends object = {}>({columnConfig, rowData, 
                             <StyledTableBodyRow {...row.getRowProps()}>
                                 {row.cells.map((cell) => {
                                     return (
-                                        <StyledTableBodyData {...cell.getCellProps()}>{cell.render("Cell")}</StyledTableBodyData>
+                                        <StyledTableBodyData {...cell.getCellProps()}>
+                                            {cell.render('Cell')}
+                                        </StyledTableBodyData>
                                     );
                                 })}
                             </StyledTableBodyRow>
@@ -53,8 +53,8 @@ const TableComponent = <ColumnData extends object = {}>({columnConfig, rowData, 
                 </StyledTableBody>
             </StyledTable>
         </StyledTableWrapper>
-    )
-}
+    );
+};
 
 export const Table = memo(TableComponent) as <ColumnData extends object = {}>(
     component: ITableProps<ColumnData>,

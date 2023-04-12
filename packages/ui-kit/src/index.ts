@@ -13,8 +13,8 @@ export { paperBorderRadiuses } from '@/paper/paper.constants';
 /**
  * Modal
  */
-export { Modal, IModalProps } from '@/modal/modal.component';
-export { EModalVariant } from '@/modal/modal.types';
+export { Modal } from '@/modal/modal.component';
+export { EModalVariant, IModalProps } from '@/modal/modal.types';
 
 /**
  * Typography

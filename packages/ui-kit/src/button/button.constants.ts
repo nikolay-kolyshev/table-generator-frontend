@@ -1,5 +1,5 @@
 import { EButtonColor, EButtonHeight, EButtonVariant, IButtonVariantType } from '@/button/button.types';
-import {EColorVariant} from '@/theme/theme.types';
+import { EColorVariant } from '@/theme/theme.types';
 import { ETypographyVariant } from '@/typography/typography.types';
 
 export const buttonColors: { [key in EButtonColor]: string } = {
@@ -38,7 +38,7 @@ export const buttonVariants: {
             color: EButtonColor.GrayscaleVariant3,
         },
         height: EButtonHeight.Small,
-            typographyVariant: ETypographyVariant.Label2WhiteText,
+        typographyVariant: ETypographyVariant.Label2WhiteText,
     },
     [EButtonVariant.SecondaryUnderlinedSmall]: {
         color: EButtonColor.Crystal,
@@ -46,7 +46,7 @@ export const buttonVariants: {
             color: EButtonColor.Crystal,
         },
         height: EButtonHeight.ExtraSmall,
-            typographyVariant: ETypographyVariant.UnderlinedLabel1Secondary,
+        typographyVariant: ETypographyVariant.UnderlinedLabel1Secondary,
         isTextButton: true,
     },
     [EButtonVariant.DangerUnderlinedSmall]: {
@@ -55,7 +55,7 @@ export const buttonVariants: {
             color: EButtonColor.Crystal,
         },
         height: EButtonHeight.ExtraSmall,
-            typographyVariant: ETypographyVariant.UnderlinedLabel1SecondaryDanger,
+        typographyVariant: ETypographyVariant.UnderlinedLabel1SecondaryDanger,
         isTextButton: true,
     },
     [EButtonVariant.CrystalExtraSmall]: {
@@ -64,6 +64,6 @@ export const buttonVariants: {
             color: EButtonColor.Crystal,
         },
         height: EButtonHeight.Small,
-            typographyVariant: ETypographyVariant.Body1Black,
+        typographyVariant: ETypographyVariant.Body1Black,
     },
 };

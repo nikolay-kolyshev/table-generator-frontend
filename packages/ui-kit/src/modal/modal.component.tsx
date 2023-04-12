@@ -1,6 +1,6 @@
 import { isKey, EKey } from '@/common/helpers/key-events.helper';
 import { StyledModalChildren, StyledModalContent } from '@/modal/modal.styles';
-import {EAnimationState, EModalVariant, IModalProps} from '@/modal/modal.types';
+import { EAnimationState, EModalVariant, IModalProps } from '@/modal/modal.types';
 import { Overlay } from '@/overlay/overlay.component';
 import React, { FC, memo, useCallback, useEffect, useRef, useState } from 'react';
 import { ModalCrossButton } from './modal-cross-button/modal-cross-button.component';
@@ -91,14 +91,15 @@ const ModalComponent: FC<IModalProps> = ({
                     onTransitionEnd={handleTransitionEnd}
                     variant={variant}
                 >
-                    {isWithCrossButton && variant === EModalVariant.Bottom && <ModalCrossButton variant={variant} onClick={handleCrossButtonClick} />}
-                    <StyledModalChildren
-                        variant={variant}
-                        isWithCross={isWithCrossButton}
-                    >
+                    {isWithCrossButton && variant === EModalVariant.Bottom && (
+                        <ModalCrossButton variant={variant} onClick={handleCrossButtonClick} />
+                    )}
+                    <StyledModalChildren variant={variant} isWithCross={isWithCrossButton}>
                         {children}
                     </StyledModalChildren>
-                    {isWithCrossButton && variant === EModalVariant.Center && <ModalCrossButton variant={variant} onClick={handleCrossButtonClick} />}
+                    {isWithCrossButton && variant === EModalVariant.Center && (
+                        <ModalCrossButton variant={variant} onClick={handleCrossButtonClick} />
+                    )}
                 </StyledModalContent>
             </Overlay>
         </Portal>

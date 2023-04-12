@@ -3,9 +3,7 @@ import { EButtonVariant } from '@/button/button.types';
 export const buttonGuide: { [key: string]: { title: string; variants: EButtonVariant[] } } = {
     Medium: {
         title: 'Medium',
-        variants: [
-            EButtonVariant.PrimaryMedium,
-        ],
+        variants: [EButtonVariant.PrimaryMedium],
     },
     Small: {
         title: 'Small',
@@ -17,8 +15,6 @@ export const buttonGuide: { [key: string]: { title: string; variants: EButtonVar
     },
     ExtraSmall: {
         title: 'Extra Small',
-        variants: [
-            EButtonVariant.CrystalExtraSmall,
-        ],
+        variants: [EButtonVariant.CrystalExtraSmall],
     },
 };

@@ -10,5 +10,5 @@ export const StyledModalCross = styled.div<{ variant: EModalVariant }>`
     margin: 0 auto;
     cursor: pointer;
     border-radius: 50%;
-    border: solid 2px ${({theme}) => theme.colors.PrimaryDanger};
+    border: solid 2px ${({ theme }) => theme.colors.PrimaryDanger};
 `;

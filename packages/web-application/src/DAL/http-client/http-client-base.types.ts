@@ -1,16 +1,18 @@
-import {AxiosRequestHeaders} from 'axios';
-import {Observable} from "rxjs";
+import { AxiosRequestHeaders } from 'axios';
+import { Observable } from 'rxjs';
 
 export type THttpClientMethodConfig = THttpClientRequest & {
-    queryParams?: object,
-    body?: object,
-}
+    queryParams?: object;
+    body?: object;
+};
 
-export type THttpClientMethodMutableConfig = THttpClientMethodConfig
-export type THttpClientMethodUnMutableConfig = Omit<THttpClientMethodConfig, 'body'>
+export type THttpClientMethodMutableConfig = THttpClientMethodConfig;
+export type THttpClientMethodUnMutableConfig = Omit<THttpClientMethodConfig, 'body'>;
 
-export type THttpClientMethod<HttpClientStrategy extends EHttpClientStrategy, Request> = <R extends Request>(url: string, config?: THttpClientMethodMutableConfig | THttpClientMethodUnMutableConfig) => THttpClientResponse<HttpClientStrategy, R>
-
+export type THttpClientMethod<HttpClientStrategy extends EHttpClientStrategy, Request> = <R extends Request>(
+    url: string,
+    config?: THttpClientMethodMutableConfig | THttpClientMethodUnMutableConfig,
+) => THttpClientResponse<HttpClientStrategy, R>;
 
 export type THttpClientRequest = {
     token?: string;
@@ -22,4 +24,7 @@ export enum EHttpClientStrategy {
     Observable = 'Observable',
 }
 
-export type THttpClientResponse<HttpClientStrategy extends EHttpClientStrategy, ResponseData> = HttpClientStrategy extends EHttpClientStrategy.Promise ? Promise<ResponseData> : Observable<ResponseData>
+export type THttpClientResponse<
+    HttpClientStrategy extends EHttpClientStrategy,
+    ResponseData,
+> = HttpClientStrategy extends EHttpClientStrategy.Promise ? Promise<ResponseData> : Observable<ResponseData>;

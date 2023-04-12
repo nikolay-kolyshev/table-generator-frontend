@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 import React, { useState } from 'react';
 import { Modal } from './modal.component';
 import userEvent from '@testing-library/user-event';
-import {renderWithTheme} from "@/common/tests.helpers";
+import { renderWithTheme } from '@/common/tests.helpers';
 
 const DefaultModal = ({ isOpenModal = false, isNoCLoseMode = false }) => {
     const [isOpen, setIsOpen] = useState(isOpenModal);

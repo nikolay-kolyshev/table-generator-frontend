@@ -1,10 +1,6 @@
 import { DEFAULT_COMPONENT_TEXT } from '@/common';
 import { Typography, typographyDefaultProps } from '@/typography/typography.component';
-import {
-    renderTypographyGuide,
-    typographyElements,
-    typographyGuideOptions,
-} from '@/typography/typography.stub';
+import { renderTypographyGuide, typographyElements, typographyGuideOptions } from '@/typography/typography.stub';
 import React from 'react';
 import { lightTheme } from '@/theme/theme.constants';
 
@@ -28,7 +24,6 @@ export const TypographyDefaultStory = () => (
 );
 
 export const TypographyGuideStory = () => renderTypographyGuide(typographyGuideOptions);
-
 
 export const TypographyElementStory = () => (
     <>

@@ -3,7 +3,7 @@ import { buttonGuide } from '@/button/button.stub';
 import { EButtonVariant } from '@/button/button.types';
 import { ComponentLabel, DEFAULT_COMPONENT_TEXT } from '@/common';
 import React, { Fragment } from 'react';
-import {darkTheme, lightTheme} from '@/theme/theme.constants';
+import { darkTheme, lightTheme } from '@/theme/theme.constants';
 
 export default {
     title: 'Components/Button',
@@ -43,25 +43,19 @@ const renderButtonGroup = (variant: EButtonVariant) => (
             {variant.toLowerCase().includes('small') ? (
                 <>
                     <span style={buttonGroupItemStyle}>
-                        <Button variant={variant}>
-                            {DEFAULT_COMPONENT_TEXT}
-                        </Button>
+                        <Button variant={variant}>{DEFAULT_COMPONENT_TEXT}</Button>
                     </span>
                     <span style={buttonGroupItemStyle}>
-                        <Button variant={variant} isIconButton={true}>
-                        </Button>
+                        <Button variant={variant} isIconButton={true}></Button>
                     </span>
                 </>
             ) : (
                 <>
                     <span style={buttonGroupItemStyle}>
-                        <Button variant={variant}>
-                            {DEFAULT_COMPONENT_TEXT}
-                        </Button>
+                        <Button variant={variant}>{DEFAULT_COMPONENT_TEXT}</Button>
                     </span>
                     <span style={buttonGroupItemStyle}>
-                        <Button variant={variant} isIconButton={true}>
-                        </Button>
+                        <Button variant={variant} isIconButton={true}></Button>
                     </span>
                 </>
             )}

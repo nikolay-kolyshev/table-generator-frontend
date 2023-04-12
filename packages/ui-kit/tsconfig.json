@@ -23,9 +23,6 @@
         "types": ["node", "jest", "@testing-library/react"],
         "outDir": "lib"
     },
-    "include": [
-        "src/**/*",
-        "src/tests/setup-tests.ts"
-    ],
+    "include": ["src/**/*", "src/tests/setup-tests.ts"],
     "exclude": ["node_modules"]
 }

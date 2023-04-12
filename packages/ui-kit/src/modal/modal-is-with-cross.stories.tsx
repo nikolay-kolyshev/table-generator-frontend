@@ -1,9 +1,9 @@
-import {DEFAULT_COMPONENT_TEXT} from '@/common';
-import {Modal} from '@/modal/modal.component';
-import {OPEN_MODAL, StyledCustomModalContent} from '@/modal/modal.stub';
-import React, {useCallback, useState} from 'react';
-import {Typography} from "@/typography";
-import {ETypographyVariant} from "@/typography/typography.types";
+import { DEFAULT_COMPONENT_TEXT } from '@/common';
+import { Modal } from '@/modal/modal.component';
+import { OPEN_MODAL, StyledCustomModalContent } from '@/modal/modal.stub';
+import React, { useCallback, useState } from 'react';
+import { Typography } from '@/typography';
+import { ETypographyVariant } from '@/typography/typography.types';
 
 export default {
     parameters: {
@@ -27,7 +27,9 @@ export const ModalWithCrossStory = () => {
         <>
             <button onClick={handleOpen}>{OPEN_MODAL}</button>
             <Modal isOpen={isOpen} onClose={handleClose} isWithCross={true}>
-                <StyledCustomModalContent><Typography variant={ETypographyVariant.Body1Black}>{DEFAULT_COMPONENT_TEXT}</Typography></StyledCustomModalContent>
+                <StyledCustomModalContent>
+                    <Typography variant={ETypographyVariant.Body1Black}>{DEFAULT_COMPONENT_TEXT}</Typography>
+                </StyledCustomModalContent>
             </Modal>
         </>
     );
@@ -48,7 +50,9 @@ export const ModalWithoutCrossStory = () => {
         <>
             <button onClick={handleOpen}>{OPEN_MODAL}</button>
             <Modal isOpen={isOpen} onClose={handleClose} isWithCross={false}>
-                <StyledCustomModalContent><Typography variant={ETypographyVariant.Body1Black}>{DEFAULT_COMPONENT_TEXT}</Typography></StyledCustomModalContent>
+                <StyledCustomModalContent>
+                    <Typography variant={ETypographyVariant.Body1Black}>{DEFAULT_COMPONENT_TEXT}</Typography>
+                </StyledCustomModalContent>
             </Modal>
         </>
     );

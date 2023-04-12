@@ -8,7 +8,7 @@ describe('Text control getBorderColor tests', () => {
         [{ focusState: ETextControlFocusState.Out, theme: lightTheme }, lightTheme.colors.GrayscaleVariant4],
         [
             { focusState: ETextControlFocusState.In, isErrorInPriority: true, valid: true, theme: lightTheme },
-            lightTheme.colors.GrayscaleVariant4
+            lightTheme.colors.GrayscaleVariant4,
         ],
         [
             { focusState: ETextControlFocusState.In, isErrorInPriority: true, valid: false, theme: lightTheme },

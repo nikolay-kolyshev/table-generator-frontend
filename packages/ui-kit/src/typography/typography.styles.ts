@@ -1,9 +1,5 @@
 import { typographyColors, typographyFontFamilies, typographyFontWeights } from '@/typography/typography.constants';
-import {
-    ETypographyColor,
-    ETypographyFontFamily,
-    ETypographyFontWeight,
-} from '@/typography/typography.types';
+import { ETypographyColor, ETypographyFontFamily, ETypographyFontWeight } from '@/typography/typography.types';
 import styled from 'styled-components';
 
 export const StyledTypography = styled.span<{

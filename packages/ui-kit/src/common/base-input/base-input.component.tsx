@@ -11,7 +11,7 @@ import {
     EInputSize,
     EInputType,
 } from '@/common/base-input/base-input.types';
-import {ETextControlFocusState} from '@/common/text-control/text-control.types';
+import { ETextControlFocusState } from '@/common/text-control/text-control.types';
 import React, {
     ChangeEvent,
     ClipboardEvent,
@@ -22,7 +22,7 @@ import React, {
     useCallback,
     useState,
 } from 'react';
-import {ETypographyVariant} from "@/typography/typography.types";
+import { ETypographyVariant } from '@/typography/typography.types';
 
 function scrollInputsAfterKeyboardAppears(inputElement: HTMLInputElement) {
     const isAndroid = navigator.userAgent !== '' && navigator.userAgent.includes('Android');

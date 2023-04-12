@@ -1,29 +1,40 @@
-import axios, {AxiosInstance} from 'axios';
+import axios, { AxiosInstance } from 'axios';
 import {
     EHttpClientStrategy,
     THttpClientMethodMutableConfig,
     THttpClientMethodUnMutableConfig,
     THttpClientRequest,
-    THttpClientResponse
+    THttpClientResponse,
 } from './http-client-base.types';
 
 export abstract class HttpClientBase<HttpClientStrategy extends EHttpClientStrategy> {
-
     private readonly baseUrl = 'http://127.0.0.1:7777/';
 
     protected apiInstance: AxiosInstance = axios;
 
     constructor() {
         this.apiInstance = axios.create({
-            baseURL: this.baseUrl
-        })
+            baseURL: this.baseUrl,
+        });
     }
 
-    protected abstract getData<ResponseData>(url: string, config?: THttpClientRequest & THttpClientMethodUnMutableConfig): THttpClientResponse<HttpClientStrategy, ResponseData>
+    protected abstract getData<ResponseData>(
+        url: string,
+        config?: THttpClientRequest & THttpClientMethodUnMutableConfig,
+    ): THttpClientResponse<HttpClientStrategy, ResponseData>;
 
-    protected abstract postData<ResponseData>(url: string, config?: THttpClientRequest & THttpClientMethodMutableConfig): THttpClientResponse<HttpClientStrategy, ResponseData>
+    protected abstract postData<ResponseData>(
+        url: string,
+        config?: THttpClientRequest & THttpClientMethodMutableConfig,
+    ): THttpClientResponse<HttpClientStrategy, ResponseData>;
 
-    protected abstract putData<ResponseData>(url: string, config?: THttpClientRequest & THttpClientMethodMutableConfig): THttpClientResponse<HttpClientStrategy, ResponseData>
+    protected abstract putData<ResponseData>(
+        url: string,
+        config?: THttpClientRequest & THttpClientMethodMutableConfig,
+    ): THttpClientResponse<HttpClientStrategy, ResponseData>;
 
-    protected abstract deleteData<ResponseData>(url: string, config?: THttpClientRequest & THttpClientMethodUnMutableConfig): THttpClientResponse<HttpClientStrategy, ResponseData>
+    protected abstract deleteData<ResponseData>(
+        url: string,
+        config?: THttpClientRequest & THttpClientMethodUnMutableConfig,
+    ): THttpClientResponse<HttpClientStrategy, ResponseData>;
 }

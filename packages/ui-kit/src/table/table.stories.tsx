@@ -1,7 +1,7 @@
-import React, {useMemo} from 'react';
-import {darkTheme, lightTheme} from '@/theme/theme.constants';
-import {Table} from "@/table/table.component";
-import {ITableProps} from "@/table/table.types";
+import React, { useMemo } from 'react';
+import { darkTheme, lightTheme } from '@/theme/theme.constants';
+import { Table } from '@/table/table.component';
+import { ITableProps } from '@/table/table.types';
 
 export default {
     parameters: {
@@ -24,7 +24,6 @@ interface Test {
 }
 
 export const DefaultTableStory = () => {
-
     const rowTestData = useMemo<ITableProps<Test>['rowData']>(() => {
         return [
             {
@@ -57,7 +56,7 @@ export const DefaultTableStory = () => {
                 data3: 'test data 3',
                 data4: 'test data 3',
             },
-        ]
+        ];
     }, []);
 
     const columnTestConfig = useMemo<ITableProps<Test>['columnConfig']>(() => {
@@ -78,13 +77,12 @@ export const DefaultTableStory = () => {
                 Header: 'Data 4',
                 accessor: 'data4',
             },
-        ]
+        ];
     }, []);
 
     return (
-        <div style={{width: '100%'}}>
-            <Table<Test> columnConfig={columnTestConfig} rowData={rowTestData}/>
+        <div style={{ width: '100%' }}>
+            <Table<Test> columnConfig={columnTestConfig} rowData={rowTestData} />
         </div>
-    )
-
-}
+    );
+};

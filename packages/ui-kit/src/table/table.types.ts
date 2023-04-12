@@ -1,4 +1,4 @@
-import {Column} from "react-table";
+import { Column } from 'react-table';
 
 export interface ITableProps<ColumnData extends object = {}> {
     columnConfig: Array<Column<ColumnData>>;
@@ -6,4 +6,3 @@ export interface ITableProps<ColumnData extends object = {}> {
     isLoading?: boolean;
     manualPagination?: boolean;
 }
-
