@@ -12,3 +12,4 @@ packages/ui-kit/storybook-static
 
 # Test coverage
 packages/**/coverage
+/packages/web-application/.swc/

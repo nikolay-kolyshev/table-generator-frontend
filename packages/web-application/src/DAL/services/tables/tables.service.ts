@@ -13,6 +13,6 @@ export class TablesService extends BaseService {
     }
 
     async getData() {
-        this.httpClient.getData(this.getServiceEndpoint('/getAll')).subscribe();
+        this.httpClient.getData(this.getServiceEndpoint('/test')).subscribe();
     }
 }
