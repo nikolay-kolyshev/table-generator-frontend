@@ -43,6 +43,7 @@ export const ButtonComponent = forwardRef(
             ...props
         }: PropsWithChildren<IButtonProps>,
         ref: React.MutableRefObject<HTMLButtonElement | null>,
+
     ) => {
         const [isFocusDisabled, setIsFocusDisabled] = useState(focusedOnInit);
         const { onBlur } = props;
