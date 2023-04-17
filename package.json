@@ -14,7 +14,7 @@
     "start:ui-kit": "lerna run start --scope ui-kit",
     "build:ui-kit": "cd packages/ui-kit && pnpm run build && cd ../",
     "unsetup": "pnpm dlx rimraf node_modules packages/ui-kit/node_modules/ packages/web-application/node_modules/",
-    "presetup": "npm run unsetup",
+    "presetup": "pnpm run unsetup",
     "setup": "pnpm install --frozen-lockfile",
     "postsetup": "pnpm run build:ui-kit",
     "prereinstall": "pnpm run unsetup && pnpm dlx rimraf pnpm-lock.yaml",
@@ -31,6 +31,7 @@
   "devDependencies": {
     "lerna": "6.6.1"
   },
+  "packageManager": "pnpm@8.1.1",
   "engineStrict": true,
   "engines": {
     "node": ">= 18.11.0",

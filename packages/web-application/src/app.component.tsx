@@ -1,4 +1,3 @@
-import React from 'react';
 import { lightTheme } from 'ui-kit';
 import { ThemeProvider } from 'styled-components';
 

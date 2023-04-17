@@ -5,7 +5,7 @@ import {
     THttpClientMethodUnMutableConfig,
     THttpClientRequest,
     THttpClientResponse,
-} from './http-client-base.types';
+} from './http-client.types';
 
 export abstract class HttpClientBase<HttpClientStrategy extends EHttpClientStrategy> {
     private readonly baseUrl = 'http://127.0.0.1:7777/';

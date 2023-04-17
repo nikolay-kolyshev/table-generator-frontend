@@ -1,5 +1,5 @@
 export class BaseService {
-    private _serviceUrl: string = '/';
+    private _serviceUrl = '/';
 
     protected set serviceUrl(serviceUrl: string) {
         this._serviceUrl = serviceUrl;
@@ -9,7 +9,7 @@ export class BaseService {
         return this._serviceUrl;
     }
 
-    protected getServiceEndpoint(endpointUrl: string, uriParam?: string) {
-        return `${this.serviceUrl}${endpointUrl}${uriParam ? '/' + uriParam : ''}`;
+    protected getServiceEndpoint(endpointUrl: string, uriParam?: string | number): string {
+        return `${this.serviceUrl}${endpointUrl}${uriParam ? '/' + uriParam.toString() : ''}`;
     }
 }

@@ -13,10 +13,9 @@ module.exports = {
         sourceType: 'module',
         project: [
             './tsconfig.eslint.json',
-            './web-app/tsconfig.json',
-            './web-app/tsconfig.eslint.json',
-            './ui-kit/tsconfig.json',
-            './ui-kit/tests/tsconfig.json',
+            './packages/ui-kit/tsconfig.json',
+            './packages/web-application/tsconfig.json',
+            './packages/web-application/tsconfig.eslint.json',
         ],
         tsconfigRootDir: __dirname,
     },
