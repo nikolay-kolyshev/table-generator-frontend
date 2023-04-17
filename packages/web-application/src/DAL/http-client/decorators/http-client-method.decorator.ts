@@ -1,4 +1,4 @@
-import { EHttpClientStrategy, THttpClientMethod } from '../http-client-base.types';
+import { EHttpClientStrategy, THttpClientMethod } from '../http-client.types';
 import { AxiosError, AxiosResponse } from 'axios';
 import { HttpClientPromise } from '../strategies/http-client-promise.strategy';
 import { catchError, defer, map, Observable } from 'rxjs';

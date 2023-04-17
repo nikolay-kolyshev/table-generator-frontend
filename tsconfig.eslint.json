@@ -1,4 +1,4 @@
 {
     "extends": "./tsconfig.base.json",
-    "include": ["packages/ui-kit/.storybook/**/*"],
+    "include": [".eslintrc.js", "packages/ui-kit/.storybook/**/*"],
 }

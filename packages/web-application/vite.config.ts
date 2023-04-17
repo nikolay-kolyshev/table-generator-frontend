@@ -1,15 +1,10 @@
 import { CommonServerOptions, defineConfig, PluginOption } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath } from 'url';
-import path from 'path';
 import swc from 'unplugin-swc';
 
 const getAliasPath = (path: string): string => {
     return fileURLToPath(new URL(path, import.meta.url));
-};
-
-const resolvePathFromDirname = (relativePath: string): string => {
-    return path.resolve(__dirname, relativePath);
 };
 
 const getCommonServerOptions = (port: number): CommonServerOptions => {

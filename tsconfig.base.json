@@ -3,7 +3,7 @@
         "allowSyntheticDefaultImports": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "jsx": "react",
+        "jsx": "react-jsx",
         "moduleResolution": "node",
         "noImplicitAny": true,
         "noImplicitReturns": true,
@@ -11,6 +11,6 @@
         "noUnusedLocals": true,
         "skipLibCheck": true,
         "sourceMap": true,
-        "strictNullChecks": true
+        "strictNullChecks": true,
     }
 }

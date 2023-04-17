@@ -9,6 +9,7 @@ interface IconWithColorProps {
     color?: EColorVariant;
 }
 
+// eslint-disable-next-line react/display-name
 export const IconWithColor = React.forwardRef<SVGSVGElement, IconWithColorProps>(
     ({ icon, color = EColorVariant.GrayscaleVariant5 }: IconWithColorProps, ref) => {
         const theme = useTheme();
