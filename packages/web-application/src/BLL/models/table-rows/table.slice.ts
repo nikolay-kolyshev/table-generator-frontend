@@ -1,16 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { TABLE_CONTAINERS_SLICE_KEY } from '@/BLL/models/table-containers/table-containers.constants';
 import { TTableContainersState } from '@/BLL/models/table-containers/table-containers.types';
+import { TABLES_SLICE_KEY } from '@/BLL/models/tables/tables.constants';
 
 const initialState: TTableContainersState = {
     previewItems: [],
     currentItem: null,
 };
 
-const tableContainersSlice = createSlice({
-    name: TABLE_CONTAINERS_SLICE_KEY,
+const tablesSlice = createSlice({
+    name: TABLES_SLICE_KEY,
     initialState,
     reducers: {},
 });
 
-export default tableContainersSlice.reducer;
+export default tablesSlice.reducer;
